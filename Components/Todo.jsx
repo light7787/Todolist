@@ -4,7 +4,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const Todo = ({ id, title, description, mongoId, complete, deleteTodo, completeTodo }) => {
   return (
-    <tr className=" border-b dark:bg-gray-800 dark:border-gray-700 text-white">
+    <tr className=" border-b dark:bg-gray-800 dark:border-gray-700 text-black">
       <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
         {id + 1}
       </th>
@@ -18,9 +18,9 @@ const Todo = ({ id, title, description, mongoId, complete, deleteTodo, completeT
         {complete ? "Completed" : "Pending"}
       </td>
       <td className="px-4 py-4 flex ">
-        <button className="py-2 px-2  text-black hover:bg-gray-600 focus:outline-none rounded-lg" onClick={() => deleteTodo(mongoId)}><DeleteIcon/></button>
+        <button className="py-2 px-2  text-white  hover:bg-gray-600 focus:outline-none rounded-lg" onClick={() => deleteTodo(mongoId)}><DeleteIcon/></button>
         {!complete &&
-          <button className="py-2 px-2  text-black hover:bg-gray-600 focus:outline-none rounded-lg " onClick={() => completeTodo(mongoId)}><CheckCircleOutlineIcon/></button>
+          <button className="py-2 px-2  text-white hover:bg-gray-600 focus:outline-none rounded-lg " onClick={() => completeTodo(mongoId)}><CheckCircleOutlineIcon/></button>
         }
       </td>
     </tr>
