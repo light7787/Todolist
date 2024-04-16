@@ -17,10 +17,10 @@ const Todo = ({ id, title, description, mongoId, complete, deleteTodo, completeT
       <td className="px-6 py-4">
         {complete ? "Completed" : "Pending"}
       </td>
-      <td className="px-4 py-4 flex ">
-        <button className="py-2 px-2  text-black  hover:bg-gray-600 focus:outline-none rounded-lg" onClick={() => deleteTodo(mongoId)}><DeleteIcon/></button>
+      <td className="px-6 py-4 flex ">
+        <button className="py-2 px-3 text-black  hover:bg-gray-700 focus:outline-none rounded-lg" onClick={() => deleteTodo(mongoId)}><DeleteIcon/></button>
         {!complete &&
-          <button className="py-2 px-2  text-black hover:bg-gray-600 focus:outline-none rounded-lg " onClick={() => completeTodo(mongoId)}><CheckCircleOutlineIcon/></button>
+          <button className="py-2 px-3  text-black hover:bg-gray-700 focus:outline-none rounded-lg " onClick={() => completeTodo(mongoId)}><CheckCircleOutlineIcon/></button>
         }
       </td>
     </tr>
