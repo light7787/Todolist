@@ -8,10 +8,10 @@ const Todo = ({ id, title, description, mongoId, complete, deleteTodo, completeT
       <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
         {id + 1}
       </th>
-      <td className={`px-6 py-4 ${complete ? "line-through" : ""}`}>
+      <td className={` text-black px-6 py-4 ${complete ? "line-through" : ""}`}>
         {title}
       </td>
-      <td className={`px-6 py-4 ${complete ? "line-through" : ""}`}>
+      <td className={` text-black px-6 py-4 ${complete ? "line-through" : ""}`}>
         {description}
       </td>
       <td className="px-6 py-4">
